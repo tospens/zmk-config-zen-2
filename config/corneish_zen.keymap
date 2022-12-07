@@ -86,12 +86,12 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
-        );
+        )
         ZMK_MACRO(UPDIR,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
-        );
+        )
         ZMK_MACRO(SELWORD,
             wait-ms = <40>;
             tap-ms = <40>;
