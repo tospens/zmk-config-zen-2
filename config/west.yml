@@ -1,11 +1,26 @@
+# Caksoylar repo with display improvements.
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/LOWPROKB
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: corne-ish-zen-v2
+      remote: caksoylar
+      revision: caksoylar/zen-v2
       import: app/west.yml
   self:
     path: config
+
+# LOWPROKB repo for building ZMK firmware.
+#manifest:
+#  remotes:
+#    - name: zmkfirmware
+#      url-base: https://github.com/LOWPROKB
+#  projects:
+#    - name: zmk
+#      remote: zmkfirmware
+#      revision: corne-ish-zen-v2
+#      import: app/west.yml
+#  self:
+#    path: config
+#
