@@ -7,7 +7,7 @@
   ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
           ╰────────────╯ ╰────────────╯            */
 
-#BASEine COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM) \
         combo_##NAME { \
             timeout-ms = <TERM>; \
             bindings = <BINDINGS>; \
