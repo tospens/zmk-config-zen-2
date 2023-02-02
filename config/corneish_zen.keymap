@@ -25,13 +25,13 @@
 #define U_UND LC(Z)
 
 // Window management keycodes.
-#define U_SLFT LS(LG(LEFT))
+#define U_SLFT LG(LS(LEFT))
 #define U_WLFT LG(LEFT)
 #define U_WNUP LG(UP)
 #define U_WRGT LG(RIGHT)
-#define U_SRGT LS(LG(RIGHT))
-#define U_DRGT LC(LG(RIGHT))
-#define U_DLFT LC(LG(LEFT))
+#define U_SRGT LG(LS(RIGHT))
+#define U_DRGT LG(LC(RIGHT))
+#define U_DLFT LG(LC(LEFT))
 #define U_DSHW LG(TAB)
 
 #include "combos.dtsi"
