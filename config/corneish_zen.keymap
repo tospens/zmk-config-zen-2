@@ -122,7 +122,6 @@
                 = <&macro_tap     &kp END>
                 , <&macro_tap     &kp DEL>
                 , <&macro_tap     &kp SPACE>
-                , <&macro_tap     &kp LEFT>
                 , <&macro_press   &kp LCTRL>
                 , <&macro_tap     &kp RIGHT>
                 , <&macro_tap     &kp LEFT>
@@ -220,7 +219,7 @@
 //             |     |     |     |   |     |BKSP | APP |
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp PSCRN       &kp F7   &kp F8    &kp F9 &kp F12
-   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &kp SELLINE     &kp F4   &kp F5    &kp F6 &kp F11
+   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &SELLINE     &kp F4   &kp F5    &kp F6 &kp F11
    &bt BT_CLR   &trans       &trans       &trans       &reset         &kp SLCK        &kp F1   &kp F2    &kp F3 &kp F10 
                              &trans       &trans       &trans         &trans          &kp BSPC &kp K_APP
                         >;
