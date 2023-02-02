@@ -35,7 +35,7 @@ COMBO(pipe,   &kp PIPE,      21 22, BASE, 40)
 COMBO(ae,     &kp LC(LA(Q)), 26 27, BASE, 40)
 COMBO(oe,     &kp LC(LA(L)), 27 28, BASE, 40)
 COMBO(aa,     &kp LC(LA(W)), 28 29, BASE, 40)
-COMBO(exit,    &kp LA(F4),     0  1, BASE, 40)
+COMBO(exit,    &kp LA(F4),    0  1, BASE, 40)
 COMBO(capswd, &caps_word,    13 16, BASE, 60)
 
     };
