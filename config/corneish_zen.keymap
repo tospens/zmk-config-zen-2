@@ -26,9 +26,9 @@
 
 // Window management keycodes.
 #define U_SLFT LG(LS(LEFT))
-#define U_WLFT LG(LEFT)
+#define U_WLFT RG(LEFT)
 #define U_WNUP LG(UP)
-#define U_WRGT LG(RIGHT)
+#define U_WRGT RG(RIGHT)
 #define U_SRGT LG(LS(RIGHT))
 #define U_DRGT LG(LC(RIGHT))
 #define U_DLFT LG(LC(LEFT))
@@ -159,7 +159,7 @@
 // |     |     |     |     |     |   |     |     |     |     |     |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp U_UND  &kp U_CUT  &kp U_CPY  &kp U_PST  &kp U_RDO    &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
+   &kp U_UND  &kp U_CUT  &kp U_CPY &kp U_PST  &kp U_RDO    &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &SELWORD  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
    &kp U_SLFT &kp U_WLFT &kp U_WNUP &kp U_WRGT &kp U_SRGT   &JOINLN   &kp HOME  &kp PG_DN &kp PG_UP &kp END
                           	   &trans     &trans     &trans       &kp ENTER &kp BSPC  &kp DEL
@@ -220,7 +220,7 @@
 //             |     |     |     |   |     |BKSP | APP |
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp PSCRN       &kp F7   &kp F8    &kp F9 &kp F12
-   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &SELLINE     &kp F4   &kp F5    &kp F6 &kp F11
+   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &kp SELLINE     &kp F4   &kp F5    &kp F6 &kp F11
    &bt BT_CLR   &trans       &trans       &trans       &reset         &kp SLCK        &kp F1   &kp F2    &kp F3 &kp F10 
                              &trans       &trans       &trans         &trans          &kp BSPC &kp K_APP
                         >;
