@@ -105,6 +105,34 @@
                 , <&macro_release &kp LCTRL &kp LSHFT>
                 ;
         )
+        ZMK_MACRO(SELLINE,
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap     &kp HOME>
+                , <&macro_press   &kp LSHFT>
+                , <&macro_tap     &kp END>
+                , <&macro_release &kp LSHFT>
+                ;
+        )
+        ZMK_MACRO(JOINLN,
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap     &kp END>
+                , <&macro_tap     &kp DEL>
+                , <&macro_tap     &kp SPACE>
+                , <&macro_tap     &kp LEFT>
+                , <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp RIGHT>
+                , <&macro_tap     &kp LEFT>
+                , <&macro_press   &kp LSHFT>
+                , <&macro_tap     &kp LEFT>
+                , <&macro_tap     &kp RIGHT>
+                , <&macro_release &kp LSHFT &kp LCTRL>
+                , <&macro_tap     &kp SPACE>
+                ;
+        )
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -131,9 +159,9 @@
 // |     |     |     |     |     |   |     |     |     |     |     |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans     &trans     &trans     &trans     &trans       &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
+   &kp U_UND  &kp U_CUT   &kp U_CPY &kp U_PST  &kp U_RDO    &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &SELWORD  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
-   &kp U_SLFT &kp U_WLFT &kp U_WNUP &kp U_WRGT &kp U_SRGT   &trans    &kp HOME  &kp PG_DN &kp PG_UP &kp END
+   &kp U_SLFT &kp U_WLFT &kp U_WNUP &kp U_WRGT &kp U_SRGT   &JOINLN   &kp HOME  &kp PG_DN &kp PG_UP &kp END
                           	   &trans     &trans     &trans       &kp ENTER &kp BSPC  &kp DEL
                         >;
                 };
@@ -192,8 +220,8 @@
 //             |     |     |     |   |     |BKSP | APP |
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp PSCRN       &kp F7   &kp F8    &kp F9 &kp F12
-   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &kp SLCK        &kp F4   &kp F5    &kp F6 &kp F11
-   &bt BT_CLR   &trans       &trans       &trans       &reset         &kp PAUSE_BREAK &kp F1   &kp F2    &kp F3 &kp F10 
+   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &trans         &kp SELLINE     &kp F4   &kp F5    &kp F6 &kp F11
+   &bt BT_CLR   &trans       &trans       &trans       &reset         &kp SLCK        &kp F1   &kp F2    &kp F3 &kp F10 
                              &trans       &trans       &trans         &trans          &kp BSPC &kp K_APP
                         >;
                 };
