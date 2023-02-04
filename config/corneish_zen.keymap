@@ -94,6 +94,15 @@
             tap-ms = <20>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
         )
+        ZMK_MACRO(WINLEFT,
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings 
+                = <&macro_press   &kp LGUI>
+                , <&macro_tap     &kp LEFT
+                , <&macro_release &kp LGUI>
+                ;
+        )
         ZMK_MACRO(SELWORD,
             wait-ms = <10>;
             tap-ms = <20>;
@@ -159,7 +168,7 @@
                         bindings = <
    &kp U_UND  &kp U_CUT  &kp U_CPY &kp U_PST  &kp U_RDO    &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &SELWORD  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
-   &kp U_SLFT &kp U_WLFT &kp U_WNUP &kp U_WRGT &kp U_SRGT   &JOINLN   &kp HOME  &kp PG_DN &kp PG_UP &kp END
+   &kp U_SLFT &WINLEFT    &kp U_WNUP &kp U_WRGT &kp U_SRGT   &JOINLN   &kp HOME  &kp PG_DN &kp PG_UP &kp END
                           	   &trans     &trans     &trans       &kp ENTER &kp BSPC  &kp DEL
                         >;
                 };
