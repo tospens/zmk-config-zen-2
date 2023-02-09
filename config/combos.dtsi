@@ -19,7 +19,7 @@
     combos {
         compatible = "zmk,combos";
 
-COMBO(semi,   &kp COLON,      6  7, BASE, 40)
+COMBO(colon,  &kp COLON,      6  7, BASE, 40)
 COMBO(lpar,   &kp LPAR,      12 13, BASE, 40)
 COMBO(rpar,   &kp RPAR,      16 17, BASE, 40)
 COMBO(lbkt,   &kp LBKT,      11 12, BASE, 40)
