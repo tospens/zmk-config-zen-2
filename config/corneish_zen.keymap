@@ -18,6 +18,27 @@
 #define FUNC 5
 #define MOUSE 6
 
+#include "combos.dtsi"
+#include "mouse.dtsi"
+
+// Navigation keys and shortcuts.
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <220>;              // repeat on tap-into-hold
+    hold-trigger-key-positions = <0>;  // tap on interrupt
+};
+
+#define NAV_LEFT  &mt HOME     LEFT    // tap: left  | long-tap: beginning of line
+#define NAV_RIGHT &mt END      RIGHT   // tap: right | long-tap: end       of line
+#define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
+#define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
+#define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+#define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
+
+#define XXX &none
+#define ___ &trans
+
 // Clipboard keycodes.
 #define U_RDO LC(Y)
 #define U_PST LC(V)
@@ -34,14 +55,6 @@
 #define U_DRGT LG(LC(RIGHT))
 #define U_DLFT LG(LC(LEFT))
 #define U_DSHW LG(TAB)
-
-#include "combos.dtsi"
-#include "mouse.dtsi"
-
-&mt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <180>;
-};
 
 &lt {
     flavor = "balanced";
@@ -181,7 +194,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,  // right-hand HRMs
    &kp Q       &kp W       &kp E        &kp R         &kp T       &kp Y         &kp U           &kp I           &kp O          &kp P             
    &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F  &kp G       &kp H         &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L    &hmr RGUI SEMI 
    &lt MOUSE Z &kp X       &kp C        &kp V         &kp B       &kp N         &kp M           &kp COMMA       &kp DOT        &kp FSLH          
-                           &lt FUNC ESC &lt NAV SPACE &lt SYM TAB &lt SYM ENTER &lt NUM BSPC    &lt MEDIA DEL
+                           &lt FUNC ESC &lt NAV SPACE &lt SYM TAB &lt SYM ENTER &lt NUM NAV_BSPC    &lt MEDIA NAV_DEL
                         >;
                 };
                 navigation_layer {
