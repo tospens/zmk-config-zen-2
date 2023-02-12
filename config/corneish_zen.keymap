@@ -9,7 +9,7 @@
 
 / { chosen { zmk,matrix_transform = &five_column_transform; }; };
 
-// Layer alias.
+/* Layer alias */
 #define BASE 0
 #define NAV 1
 #define MEDIA 2
@@ -21,7 +21,7 @@
 #include "combos.dtsi"
 #include "mouse.dtsi"
 
-// Navigation keys and shortcuts.
+/* Navigation keys and shortcuts */
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
@@ -56,9 +56,14 @@
 #define U_DLFT LG(LC(LEFT))
 #define U_DSHW LG(TAB)
 
-&lt {
+/* Settings */
+
+#define QUICK_TAP_MS 175
+
+&lt {  // layer-tap config
     flavor = "balanced";
-    tapping-term-ms = <180>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 &caps_word {
@@ -92,7 +97,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,  // right-hand HRMs
 )
 
 / {
-    behaviors {
+    /*behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -102,7 +107,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,  // right-hand HRMs
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-    };
+    };*/
 
     macros {
         ZMK_MACRO(CBLCK,
