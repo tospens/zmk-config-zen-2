@@ -187,7 +187,7 @@ ZMK_LAYER(nav,
     &kp U_UND  &kp U_CUT  &kp U_CPY  &kp U_PST  &kp U_RDO    &kp U_RDO &kp U_PST &kp U_CPY &kp U_CUT &kp U_UND
     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &SELWORD  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
     &kp U_SLFT &WINLEFT   &WINUP     &WINRGHT   &kp U_SRGT   &JOINLN   &kp HOME  &kp PG_DN &kp PG_UP &kp END
-                          	   &trans     &trans     &trans       &kp ENTER &kp BSPC  &kp DEL
+                          	   &trans     &trans     &trans       &kp ENTER &NAV_BSPC  &NAV_DEL
 )
 
 ZMK_LAYER(media,
