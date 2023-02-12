@@ -1,12 +1,12 @@
 # Caksoylar repo with display improvements.
 manifest:
  remotes:
-   - name: caksoylar
-     url-base: https://github.com/caksoylar
+   - name: tospens
+     url-base: https://github.com/tospens
  projects:
    - name: zmk
-     remote: caksoylar
-     revision: caksoylar/zen-v2+mouse
+     remote: tospens
+     revision: main
      import: app/west.yml
  self:
    path: config
