@@ -221,7 +221,7 @@ ZMK_LAYER(func,
 ZMK_LAYER(mouse,
     &trans     &trans       &trans       &trans     &trans       &kp U_RDO &kp U_PST        &kp U_CPY        &kp U_CUT      &kp U_UND
     &kp LGUI   &kp LALT     &kp LCTRL    &kp LSHFT  &trans       &trans    &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT
-    &trans     &tog MOUSE   &trans       &trans     &trans       &trans    &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT
+    &trans     &trans       &trans       &trans     &trans       &trans    &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT
                     	   &mkp MB4     &mkp MB5   &trans       &mkp RCLK &mkp LCLK        &mkp MCLK
 )
 
