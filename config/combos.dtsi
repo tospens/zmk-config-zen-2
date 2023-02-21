@@ -18,8 +18,8 @@
 ZMK_COMBO(sqt,   &kp SQT,       LT3 LT2,     BASE NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(dqt,   &kp DQT,       LT2 LT1,     BASE NAV NUM, COMBO_TERM_FAST)
 
-ZMK_COMBO(repeat,&key_repeat,   LM2 LM1,     BASE NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(excl,  &kp EXCL  ,    LM3 LM2,     BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(tab,   &kp TAB,       LM3 LM2,     BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(ret,   &kp RETURN,    LM2 LM1,     BASE NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1,     BASE NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2,     BASE NAV NUM, COMBO_TERM_FAST)
@@ -33,10 +33,14 @@ ZMK_COMBO(rpar,  &kp RPAR,      RM2 RM3,     BASE NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lbrk,  &kp LBKT,      RB1 RB2,     BASE NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(rbrk,  &kp RBKT,      RB2 RB3,     BASE NAV NUM, COMBO_TERM_FAST)
 
+ZMK_COMBO(dk,   &sl DK,         RM1 RM3,     BASE NAV NUM, COMBO_TERM_SLOW)
+
+/*
 // Danish letters
 ZMK_COMBO(da_aa, &dk_aa,        RT3 RT4,     BASE, COMBO_TERM_FAST)
 ZMK_COMBO(da_ae, &dk_ae,        RM3 RM4,     BASE, COMBO_TERM_FAST)
 ZMK_COMBO(da_oe, &dk_oe,        RB3 RB4,     BASE, COMBO_TERM_FAST)
+*/
 
 /* Other symbols (vertical combos) */
 ZMK_COMBO(at,    &kp AT,        LT3 LM3,     BASE NAV NUM, COMBO_TERM_SLOW)
@@ -56,6 +60,6 @@ ZMK_COMBO(tilde, &kp TILDE,     LM0 LB0,     BASE NAV NUM, COMBO_TERM_SLOW)
 
 ZMK_COMBO(under, &kp UNDER,     RM0 RB0,     BASE NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(minus, &kp MINUS,     RM1 RB1,     BASE NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(fslh,  &kp FSLH,      RM2 RB2,     BASE NAV NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(excl,  &kp EXCL,      RM2 RB2,     BASE NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3,     BASE NAV NUM, COMBO_TERM_SLOW)
 
