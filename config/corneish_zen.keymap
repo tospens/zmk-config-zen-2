@@ -157,16 +157,21 @@ ZMK_BEHAVIOR(winup, macro,
     , <&macro_release &kp LGUI>
     ;
 )
-ZMK_BEHAVIOR(selword, macro,
+ZMK_BEHAVIOR(selwordstart, macro,
     wait-ms = <10>;
     tap-ms = <20>;
     bindings
-    = <&macro_press   &kp LCTRL>
-    , <&macro_tap     &kp RIGHT>
-    , <&macro_press   &kp LSHFT>
-    , <&macro_tap     &kp LEFT>
-    , <&macro_release &kp LCTRL &kp LSHFT>
-    ;
+    = <&kt LCTRL>, <&kp RIGHT>, <&kp LEFT>, <&kt LSHFT>, <&kp RIGHT>;
+)
+ZMK_BEHAVIOR(selwordend, macro,
+    wait-ms = <10>;
+    tap-ms = <20>;
+    bindings
+    = <&kt LCTRL>, <&kt LSHFT>;
+)
+ZMK_BEHAVIOR(selword, tri_state,
+    bindings = <&selwordstart>, <NAV_RIGHT>, <&selwordend>;
+    ignored-key-positions = <RM1>;
 )
 ZMK_BEHAVIOR(selline, macro,
     wait-ms = <10>;
@@ -256,7 +261,10 @@ ZMK_BEHAVIOR(swap, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
     ignored-key-positions = <LT2>;
 )
-
+ZMK_BEHAVIOR(tabswap, tri_state,
+    bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+    ignored-key-positions = <LT2>;
+)
 
 /* Keymap */
 
@@ -274,7 +282,7 @@ ZMK_LAYER(QWERTY,
 
 ZMK_LAYER(nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp U_UND     &kp U_RDO     &kp LS(TAB)   &swap         ___             &selline      NAV_BSPC      &kp ENTER     NAV_DEL       ___
+    &kp U_UND     &kp U_RDO     &kp LS(TAB)   &swap         &tabswap        &selline      NAV_BSPC      &kp ENTER     NAV_DEL       ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___             &selword      NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
