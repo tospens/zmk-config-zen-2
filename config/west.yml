@@ -1,15 +1,28 @@
-# Caksoylar repo with display improvements.
+# Tospens repo with display improvements.
+# manifest:
+#  remotes:
+#    - name: tospens
+#      url-base: https://github.com/tospens
+#  projects:
+#    - name: zmk
+#      remote: tospens
+#      revision: main
+#      import: app/west.yml
+#  self:
+#    path: config
+
+# Urob repo https://github.com/urob/zmk
 manifest:
- remotes:
-   - name: tospens
-     url-base: https://github.com/tospens
- projects:
-   - name: zmk
-     remote: tospens
-     revision: main
-     import: app/west.yml
- self:
-   path: config
+  remotes:
+    - name: urob
+      url-base: https://github.com/urob
+  projects:
+    - name: zmk
+      remote: urob
+      revision: main
+      import: app/west.yml
+  self:
+    path: config
 
 # ZMK repo for building ZMK firmware.
 # manifest:
