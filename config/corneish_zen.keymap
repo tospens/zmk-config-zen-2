@@ -59,7 +59,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)    // FN + NUM --> SYS
 //#define U_WLFT LG(LEFT) // Replaced by macros
 //#define U_WNUP LG(UP)
 //#define U_WRGT LG(RIGHT)
-#define U_SRGT LG(LS(RIGHT))
+#define U_SRGT LG(LS(RIGHT))        
 #define U_DRGT LG(LC(RIGHT))
 #define U_DLFT LG(LC(LEFT))
 #define U_DSHW LG(TAB)
@@ -327,7 +327,7 @@ ZMK_LAYER(sym,
 
 ZMK_LAYER(fn,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp F12       &kp F7        &kp F8        &kp F9        ___             ___           &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep  
+    &kp F12       &kp F7        &kp F8        &kp F9        ___             &kp PSCRN     &kp C_PREV    &kp C_VOL_UP  &kp C_NEXT    &win_sleep  
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp F11       &kp F4        &kp F5        &kp F6        ___             ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___         
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
