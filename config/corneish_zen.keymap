@@ -64,6 +64,9 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)    // FN + NUM --> SYS
 #define U_DLFT LG(LC(LEFT))
 #define U_DSHW LG(TAB)
 
+// Misc
+#define U_PSCR LC(PSCRN)
+
 /* Settings */
 
 #define QUICK_TAP_MS 175
@@ -293,7 +296,7 @@ ZMK_LAYER(nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &kp U_UND     &kp U_RDO     &kp LS(TAB)   &swap         &tabswap        &selline      NAV_BSPC      &kp ENTER     NAV_DEL       ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___             &selword      NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT
+    &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     U_PSCR          &selword      NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp U_SLFT    &winleft      &winup        &winrght      &kp U_SRGT      &joinln       &kp TAB       &kp PG_DN     &kp PG_UP     &kp END
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
